@@ -1,11 +1,11 @@
 body {
     font-family: 'ff-tisa-sans-web-pro', serif;
-    border-top: 4px solid #860278;
+    border-top: 4px solid #6C307D;
     background-color: #fafafa;
 }
 
 a {
-	color: #772878;
+	color: #6C307D;
 }
 
 a:hover {
@@ -15,7 +15,23 @@ a:hover {
 header {
 	background-color: #fff;
 	padding: 30px 0;
-	text-align: center;
+}
+
+header h1 {
+  font-size: 80px;
+}
+
+header h1 em {
+  background: #000;
+  color: #fff;
+}
+
+header h2 {
+  font-size: 40px;
+}
+
+header h2 em {
+  color: #6C307D;
 }
 
 header p {
@@ -24,7 +40,7 @@ header p {
 }
 
 #logo {
-	height: 150px;
+	height: 250px;
 	margin: 50px 0;
 }
 
