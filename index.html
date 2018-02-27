@@ -45,22 +45,115 @@
 	</div></div>
 </header>
 
+<br><br><br><br><br><br>
+
 <div class="container">
   <div class="col-md-4">
     <img src="images/nlp.png" alt="">
     <h3>NLP</h3>
+    <p>Integer consectetur mollis nulla, non ultrices dui efficitur at. Praesent placerat vitae ex sed tempor. Nullam ante nunc, vehicula sed purus nec, fringilla sagittis ex. </p>
   </div>
   <div class="col-md-4">
     <img src="images/sentiment.png" alt="">
     <h3>Sentiment</h3>
+    <p>Ut non rhoncus massa. Nulla dictum molestie lacus. Morbi in sagittis diam. Aenean mollis scelerisque nisi. Suspendisse scelerisque elit placerat lectus cursus gravida.</p>
   </div>
   <div class="col-md-4">
     <img src="images/stats.png" alt="">
     <h3>Statistics</h3>
+    <p>Duis dignissim nunc pellentesque libero efficitur, ut mattis orci congue. Morbi eget blandit odio, vitae lobortis elit. Nam non convallis velit.</p>
   </div>
 </div>
 
-<pre><code class="javascript">alert(1)</code></pre>
+<br><br><br><br><br><br>
+
+<main class="container">
+  <div class="col-md-6">
+    <pre><code class="javascript">
+// Load wink-pos-tagger.
+var posTagger = require( 'wink-pos-tagger' );
+
+// Create an instance of the pos tagger.
+var tagger = posTagger();
+
+// Tag the sentence using the tag sentence api.
+tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUniversity on "online safety" recently:-)! reach us at info@feminisminindia.com. #DigitalSaftey http://bit.ly/2F2m9rL' );
+    </code></pre>
+  </div>
+  <div class="col-md-6">
+    <h1>Getting started is easy!</h1>
+    <p>Donec a scelerisque urna. Quisque lobortis vitae lectus vitae accumsan. Mauris sodales molestie mauris vel venenatis. Phasellus fermentum tincidunt accumsan. Maecenas in sodales felis.</p>
+  </div>
+
+  <div class="clearfix"></div>
+  <br><br><br><br><br><br>
+
+  <div class="col-md-6">
+    <h1>Get simple data structures</h1>
+    <p>Donec a ligula nec nisi elementum ultrices. Etiam fermentum erat arcu, a ullamcorper ex pellentesque pulvinar. Pellentesque et semper velit. Vivamus elementum in neque posuere interdum.</p>
+  </div>
+  <pre><code class="javascript">
+[
+  { value: '@superman', tag: 'mention' },
+  { value: ':', tag: 'punctuation' },
+  { value: 'hit', tag: 'word' },
+  { value: 'me', tag: 'word' },
+  { value: 'up', tag: 'word' },
+  { value: 'on', tag: 'word' },
+  { value: 'my', tag: 'word' },
+  { value: 'email', tag: 'word' },
+  { value: 'r2d2@gmail.com', tag: 'email' },
+  { value: ',', tag: 'punctuation' },
+  { value: '2', tag: 'number' },
+  { value: 'of', tag: 'word' },
+  { value: 'us', tag: 'word' },
+  { value: 'plan', tag: 'word' },
+  { value: 'party', tag: 'word' },
+  { value: '🎉', tag: 'emoji' },
+  { value: 'tom', tag: 'word' },
+  { value: 'at', tag: 'word' },
+  { value: '3pm', tag: 'time' },
+  { value: ':)', tag: 'emoticon' },
+  { value: '#fun', tag: 'hashtag' }
+]
+  </code></pre>
+  </div>
+
+  <div class="clearfix"></div>
+  <br><br><br><br><br><br>
+
+  <div class="col-md-6">
+    <pre><code class="javascript">
+// Load wink-sentiment package.
+var sentiment = require( 'wink-sentiment' );
+// Just give any phrase and checkout the sentiment score. A positive score
+// means a positive sentiment, whereas a negative score indicates a negative
+// sentiment. Neutral sentiment is signalled by a near zero score.
+sentiment( 'Excited to be part of the @imascientist team:-)!' );
+// -> { score: 5,
+//      normalizedScore: 2.5,
+//      tokenizedPhrase: [
+//        { value: 'Excited', tag: 'word', score: 3 },
+//        { value: 'to', tag: 'word' },
+//        { value: 'be', tag: 'word' },
+//        { value: 'part', tag: 'word' },
+//        { value: 'of', tag: 'word' },
+//        { value: 'the', tag: 'word' },
+//        { value: '@imascientist', tag: 'mention' },
+//        { value: 'team', tag: 'word' },
+//        { value: ':-)', tag: 'emoticon', score: 2 },
+//        { value: '!', tag: 'punctuation' }
+//      ]
+//    }
+    </code></pre>
+  </div>
+  <div class="col-md-6">
+    <h1>Get results</h1>
+    <p>Suspendisse nec quam nibh. Duis at libero et massa molestie viverra. Nunc ut ultricies mauris, nec imperdiet nisl. Integer pellentesque, enim sed semper iaculis, orci orci finibus quam, id dapibus elit odio pellentesque sem.</p>
+  </div>
+
+</main>
+
 
 
 <footer>
