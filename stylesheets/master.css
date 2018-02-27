@@ -97,3 +97,14 @@ footer p {
 footer p em {
 	float: right;
 }
+
+button.btn-default[type="button"] {
+  border-radius: 3px;
+  background: #6C307D;
+  color: #fff;
+  box-shadow: 0 0 100px #C3ABCA;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  position: absolute;
+}
