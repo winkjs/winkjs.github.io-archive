@@ -96,21 +96,16 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
 [
   { value: '@superman', tag: 'mention' },
   { value: ':', tag: 'punctuation' },
-  { value: 'hit', tag: 'word' },
+  { value: 'mail', tag: 'word' },
   { value: 'me', tag: 'word' },
-  { value: 'up', tag: 'word' },
-  { value: 'on', tag: 'word' },
-  { value: 'my', tag: 'word' },
-  { value: 'email', tag: 'word' },
+  { value: 'at', tag: 'word' },
   { value: 'r2d2@gmail.com', tag: 'email' },
   { value: ',', tag: 'punctuation' },
   { value: '2', tag: 'number' },
   { value: 'of', tag: 'word' },
   { value: 'us', tag: 'word' },
-  { value: 'plan', tag: 'word' },
   { value: 'party', tag: 'word' },
   { value: '🎉', tag: 'emoji' },
-  { value: 'tom', tag: 'word' },
   { value: 'at', tag: 'word' },
   { value: '3pm', tag: 'time' },
   { value: ':)', tag: 'emoticon' },
@@ -124,27 +119,25 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
 
   <div class="col-md-6">
     <pre><code class="javascript">
-// Load wink-sentiment package.
 var sentiment = require( 'wink-sentiment' );
-// Just give any phrase and checkout the sentiment score. A positive score
-// means a positive sentiment, whereas a negative score indicates a negative
-// sentiment. Neutral sentiment is signalled by a near zero score.
 sentiment( 'Excited to be part of the @imascientist team:-)!' );
-// -> { score: 5,
-//      normalizedScore: 2.5,
-//      tokenizedPhrase: [
-//        { value: 'Excited', tag: 'word', score: 3 },
-//        { value: 'to', tag: 'word' },
-//        { value: 'be', tag: 'word' },
-//        { value: 'part', tag: 'word' },
-//        { value: 'of', tag: 'word' },
-//        { value: 'the', tag: 'word' },
-//        { value: '@imascientist', tag: 'mention' },
-//        { value: 'team', tag: 'word' },
-//        { value: ':-)', tag: 'emoticon', score: 2 },
-//        { value: '!', tag: 'punctuation' }
-//      ]
-//    }
+    </code></pre>
+    <pre><code class="javascript">
+{ score: 5,
+  normalizedScore: 2.5,
+  tokenizedPhrase: [
+    { value: 'Excited', tag: 'word', score: 3 },
+    { value: 'to', tag: 'word' },
+    { value: 'be', tag: 'word' },
+    { value: 'part', tag: 'word' },
+    { value: 'of', tag: 'word' },
+    { value: 'the', tag: 'word' },
+    { value: '@imascientist', tag: 'mention' },
+    { value: 'team', tag: 'word' },
+    { value: ':-)', tag: 'emoticon', score: 2 },
+    { value: '!', tag: 'punctuation' }
+    ]
+}
     </code></pre>
   </div>
   <div class="col-md-6">
