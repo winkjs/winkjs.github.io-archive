@@ -1,7 +1,6 @@
 body {
     font-family: 'ff-tisa-sans-web-pro', serif;
     border-top: 4px solid #6C307D;
-    background-color: #fafafa;
 }
 
 a {
@@ -82,6 +81,7 @@ footer {
 	font-size: 14px;
 	color: #666;
 	text-align: center;
+  background: #fafafa;
 }
 
 footer p {
