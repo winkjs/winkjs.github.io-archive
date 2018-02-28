@@ -12,8 +12,8 @@ a:hover {
 }
 
 header {
-	background-color: #fff;
-	padding: 30px 0;
+  background-color: #fff;
+  padding: 50px 0;
 }
 
 header h1 {
@@ -36,6 +36,21 @@ header h2 em {
 header p {
 	font-size: 1.5em;
 	margin-top: 30px;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar .navbar-nav > li > a {
+  text-transform: uppercase;
+}
+
+.navbar .navbar-brand {
+  font-family: 'ff-tisa-web-pro', serif;
+  font-weight: bold;
+  color: #6C307D;
+  font-size: 50px;
 }
 
 #logo {
