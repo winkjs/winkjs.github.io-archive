@@ -148,3 +148,34 @@ button.btn-default[type="button"] {
   padding: 10px 20px;
   position: absolute;
 }
+
+#viz td {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bubble {
+  margin: auto auto;
+  border-radius: 100%;
+  transition: all 1s ease;
+}
+
+.bubble.off {
+  height: 0;
+  width: 0;
+  background: #fff;
+}
+
+.bubble.on {
+  height: 20px;
+  width: 20px;
+  background: #ddd;
+}
+
+.bubble.wink {
+  height: 20px;
+  width: 20px;
+  background: #6C307D;
+}
