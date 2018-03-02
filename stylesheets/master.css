@@ -1,6 +1,5 @@
 body {
     font-family: 'ff-tisa-sans-web-pro', serif;
-    border-top: 4px solid #6C307D;
 }
 
 a {
@@ -13,15 +12,25 @@ a:hover {
 
 header {
   background-color: #fff;
-  padding: 50px 0;
 }
 
+.masthead {
+  padding: 200px 0;
+}
 header h1 {
-  font-size: 80px;
+  font-size: 65px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
 }
 
-header h1 em {
-  background: #000;
+header h1 span {
+  font-size: 80px;
+  text-transform: uppercase;
+  background: #333;
+  display: inline-block;
+  margin-left: -35px;
+  margin-top: 0;
+  padding: 30px;
   color: #fff;
 }
 
@@ -31,6 +40,7 @@ header h2 {
 
 header h2 em {
   color: #6C307D;
+  font-weight: bold;
 }
 
 header p {
@@ -40,17 +50,26 @@ header p {
 
 .navbar {
   border-radius: 0;
+  border-top: 4px solid #6C307D;
+  padding: 10px 0 15px 0;
 }
 
 .navbar .navbar-nav > li > a {
   text-transform: uppercase;
+  color: #fff;
 }
 
 .navbar .navbar-brand {
   font-family: 'ff-tisa-web-pro', serif;
   font-weight: bold;
-  color: #6C307D;
-  font-size: 50px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.navbar .navbar-brand img {
+  height: 25px;
+  margin-top: -5px;
+  display: inline-block;
 }
 
 #logo {
