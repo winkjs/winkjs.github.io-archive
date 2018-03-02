@@ -15,7 +15,8 @@ header {
 }
 
 .masthead {
-  padding: 200px 0;
+  padding-top: 200px;
+  padding-bottom: 50px;
 }
 header h1 {
   font-size: 65px;
@@ -75,6 +76,11 @@ header p {
 #logo {
 	height: 250px;
 	margin: 50px 0;
+}
+
+.feat {
+  background: #eee;
+  padding-bottom: 60px;
 }
 
 main {
