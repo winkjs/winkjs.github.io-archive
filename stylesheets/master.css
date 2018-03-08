@@ -15,8 +15,8 @@ header {
 }
 
 .masthead {
-  padding-top: 200px;
-  padding-bottom: 50px;
+  padding-top: 150px;
+  padding-bottom: 0px;
 }
 header h1 {
   font-size: 65px;
@@ -27,12 +27,12 @@ header h1 {
 header h1 span {
   font-size: 80px;
   text-transform: uppercase;
-  background: #333;
+  border: 7px solid #333;
   display: inline-block;
   margin-left: -35px;
   margin-top: 0;
-  padding: 30px;
-  color: #fff;
+  padding: 23px;
+  color: #333;
 }
 
 header h2 {
@@ -57,11 +57,12 @@ header p {
 
 .navbar .navbar-nav > li > a {
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: #fff;
 }
 
 .navbar .navbar-brand {
-  font-family: 'ff-tisa-web-pro', serif;
+  font-family: 'ff-tisa-sans-web-pro', serif;
   font-weight: bold;
   color: #fff;
   font-size: 30px;
