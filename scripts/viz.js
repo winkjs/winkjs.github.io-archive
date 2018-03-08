@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var nOfCols = 18, nOfRows = 13;
+  var nOfCols = 15, nOfRows = 10;
 
   var $table = $( '<table>' );
   var $bubbles = [];
