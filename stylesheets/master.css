@@ -81,7 +81,15 @@ header p {
 
 .feat {
   background: #eee;
+  text-align: center;
   padding-bottom: 60px;
+  font-size: 1.6rem;
+}
+
+.feat h3 {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-weight: 700;
 }
 
 .featimg {
