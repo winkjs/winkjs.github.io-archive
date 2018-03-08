@@ -16,7 +16,7 @@ header {
 
 .masthead {
   padding-top: 150px;
-  padding-bottom: 0px;
+  padding-bottom: 100px;
 }
 header h1 {
   font-size: 65px;
@@ -83,6 +83,7 @@ header p {
   background: #eee;
   text-align: center;
   padding-bottom: 60px;
+  margin-bottom: 80px;
   font-size: 1.6rem;
 }
 
@@ -131,9 +132,14 @@ main p {
 pre {
   background-color: #fff;
   border: none;
-  box-shadow: 0 0 100px #C3ABCA;
+  box-shadow: 0 0 10px #C3ABCA;
+  transition: 1s ease box-shadow;
   border-radius: 0;
   padding: 1px;
+}
+
+pre:hover {
+  box-shadow: 0 0 100px #C3ABCA;
 }
 
 footer {
@@ -156,11 +162,16 @@ button.btn-default[type="button"] {
   border-radius: 3px;
   background: #6C307D;
   color: #fff;
-  box-shadow: 0 0 100px #C3ABCA;
   border: 1px solid #fff;
   text-transform: uppercase;
   padding: 10px 20px;
   position: absolute;
+  transition: 0.3s ease box-shadow;
+  margin-top: 10px;
+}
+
+button.btn-default[type="button"]:hover {
+  box-shadow: 0 0 10px #C3ABCA;
 }
 
 #viz {
