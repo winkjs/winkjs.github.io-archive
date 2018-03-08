@@ -154,6 +154,10 @@ button.btn-default[type="button"] {
   position: absolute;
 }
 
+#viz {
+  margin-top: 40px;
+}
+
 #viz td {
   height: 30px;
   width: 30px;
