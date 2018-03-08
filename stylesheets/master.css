@@ -10,6 +10,25 @@ a:hover {
 	color: #860278;
 }
 
+#packages-list {
+  position: fixed;
+  top: 80px;
+  background: #eee;
+  width: 100%;
+  z-index: 100;
+  padding-bottom: 30px;
+  box-shadow: 0 0 10px #aaa;
+  display: none;
+}
+
+#packages-list dt {
+  margin-top: 30px;
+}
+
+#packages-list a {
+  font-size: 1.6rem;
+}
+
 header {
   background-color: #fff;
 }
@@ -59,6 +78,10 @@ header p {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #fff;
+}
+
+.navbar .navbar-nav > li > a.selected {
+  color: #aaa;
 }
 
 .navbar .navbar-brand {
