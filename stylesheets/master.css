@@ -197,6 +197,49 @@ button.btn-default[type="button"]:hover {
   box-shadow: 0 0 10px #C3ABCA;
 }
 
+.signup {
+  background: #6c307d;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.signup .msg {
+  text-align: right;
+}
+
+
+.signup input[type="email"] {
+  border: none;
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 2px solid white;
+  font-size: 2rem;
+  background-color: transparent;
+  margin-top: 25px;
+}
+
+
+.signup input[type="email"]::placeholder {
+  color: #ccc;
+}
+
+.signup input[type="email"]:-webkit-autofill,
+.signup input[type="email"]:focus {
+  outline: none;
+}
+
+
+.signup input[type="submit"] {
+  color: #6c307d;
+  background-color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 #viz {
   margin-top: 40px;
 }
