@@ -3,4 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $( '#packages-list').toggle();
     $( this ).toggleClass( 'selected' );
   } );
+
+  $( '.close-button' ).on( 'click', function () {
+    $( '#packages-list' ).hide();
+  })
 } );

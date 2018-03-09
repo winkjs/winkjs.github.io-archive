@@ -29,6 +29,27 @@ a:hover {
   font-size: 1.6rem;
 }
 
+#packages-list a.close-button {
+  display: block;
+  margin: 20px auto;
+  color: red;
+  background: #6c307d;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 37px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0;
+  border-radius: 100%;
+  opacity: 0.5;
+}
+
+#packages-list a.close-button:hover {
+  opacity: 1;
+}
+
 header {
   background-color: #fff;
 }
