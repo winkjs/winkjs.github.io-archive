@@ -1,25 +1,47 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var nOfCols = 15, nOfRows = 10;
+  var nOfCols = 42, nOfRows = 13;
 
   var $table = $( '<table>' );
   var $bubbles = [];
 
-  for ( var i = 0; i < nOfRows; i++ ) {
-    var $row = $( '<tr>' );
-    $bubbles[i] = [];
-    for ( var j = 0; j < nOfCols; j++ ) {
-      var $cell = $( '<td>' );
-      var $bubble = $( '<div>' )
-        .addClass( 'bubble' )
-        .addClass( 'off' )
-        .text( ' ' );
-      $bubbles[i][j] = $bubble;
-      $cell.append( $bubble );
-      $row.append( $cell );
+  var img = new Image();
+  img.src = '/images/tagline.png';
 
-      if ( Math.random() < 0.05 ) $bubble.attr( 'class','bubble on' );
+  var canvas = document.createElement( 'canvas' );
+  var ctx = canvas.getContext( '2d' );
+
+  img.onload = function () {
+    console.log('drawing');
+    ctx.drawImage( img, 0, 0 );
+    drawBubbles();
+  }
+
+  function getPixel(x,y) {
+    var data = ctx.getImageData( x, y, 1, 1).data;
+    return data;
+  }
+
+  function drawBubbles() {
+    for ( var i = 0; i < nOfRows; i++ ) {
+      var $row = $( '<tr>' );
+      $bubbles[i] = [];
+      for ( var j = 0; j < nOfCols; j++ ) {
+        var pixelData = getPixel( j, i );
+        var $cell = $( '<td>' );
+        var $bubble = $( '<div>' )
+          .addClass( 'bubble' )
+          .addClass( 'off' )
+          .text( ' ' );
+
+        if( pixelData[0] !== 0 ) $bubble.addClass( 'black' ).addClass( 'on' );
+        $bubbles[i][j] = $bubble;
+        $cell.append( $bubble );
+        $row.append( $cell );
+
+        //if ( Math.random() < 0.05 ) $bubble.attr( 'class','bubble on' );
+      }
+      $table.append( $row );
     }
-    $table.append( $row );
   }
 
   function loop() {
@@ -44,14 +66,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
       }
 
-      var iterations = Math.floor(Math.random() * 5);
+      var iterations = Math.floor(Math.random() * 50);
 
       for ( var i = 0; i < iterations; i++ ) {
         alterBubble();
       }
 
       loop();
-    }, 200)
+    }, 500)
   }
 
   loop();
