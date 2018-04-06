@@ -176,14 +176,8 @@ main p {
 pre {
   background-color: #fff;
   border: none;
-  box-shadow: 0 0 10px #C3ABCA;
-  transition: 1s ease box-shadow;
   border-radius: 0;
   padding: 1px;
-}
-
-pre:hover {
-  box-shadow: 0 0 100px #C3ABCA;
 }
 
 footer {
@@ -221,7 +215,7 @@ footer .social-icons ul li a img {
   margin: 10px;
 }
 
-button.btn-default[type="button"] {
+a.btn-default[role="button"] {
   border-radius: 3px;
   background: #6C307D;
   color: #fff;
@@ -233,14 +227,15 @@ button.btn-default[type="button"] {
   margin-top: 10px;
 }
 
-button.btn-default[type="button"]:hover {
+a.btn-default[role="button"]:hover {
   box-shadow: 0 0 10px #C3ABCA;
 }
 
 .signup {
+  margin-top: 120px;
   background: #6c307d;
   color: #fff;
-  padding: 60px 0;
+  padding: 120px 0;
 }
 
 .signup .msg {
