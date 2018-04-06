@@ -222,7 +222,6 @@ a.btn-default[role="button"] {
   border: 1px solid #fff;
   text-transform: uppercase;
   padding: 10px 20px;
-  position: absolute;
   transition: 0.3s ease box-shadow;
   margin-top: 10px;
 }
