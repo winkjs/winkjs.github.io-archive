@@ -116,17 +116,17 @@
   <div class="col-md-4">
     <img src="images/nlp.png" class="featimg">
     <h3>NLP</h3>
-    <p>Integer consectetur mollis nulla, non ultrices dui efficitur at. Praesent placerat vitae ex sed tempor. Nullam ante nunc, vehicula sed purus nec, fringilla sagittis ex. </p>
+    <p>What do we mean when we say things? We help you <a href="https://github.com/winkjs/wink-tokenizer">break sentences down</a>, <a href="https://github.com/winkjs/wink-pos-tagger">tag it</a>, and <a href="https://github.com/winkjs/wink-ner"> take out the information</a> you need.</p>
   </div>
   <div class="col-md-4">
     <img src="images/ml.png" class="featimg">
     <h3>Machine Learning</h3>
-    <p>Ut non rhoncus massa. Nulla dictum molestie lacus. Morbi in sagittis diam. Aenean mollis scelerisque nisi. Suspendisse scelerisque elit placerat lectus cursus gravida.</p>
+    <p>Have a data set? Give it to the machine to make predictions using our <a href="https://github.com/winkjs/wink-naive-bayes-text-classifier">classifier</a> or <a href="https://github.com/winkjs/wink-regression-tree">regression tree</a>.</p>
   </div>
   <div class="col-md-4">
     <img src="images/stats.png" class="featimg">
     <h3>Statistics</h3>
-    <p>Duis dignissim nunc pellentesque libero efficitur, ut mattis orci congue. Morbi eget blandit odio, vitae lobortis elit. Nam non convallis velit.</p>
+    <p>In the end, it's all numbers and maths. Use our <a href="https://github.com/winkjs/wink-helpers">helpers</a> and <a href="https://github.com/winkjs/wink-helpers">statistics</a> packages for fast and stable analysis.</p>
   </div>
 </div>
 </div>
@@ -145,8 +145,8 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
     </code></pre>
   </div>
   <div class="col-md-6">
-    <h1>Getting started is easy!</h1>
-    <p>Donec a scelerisque urna. Quisque lobortis vitae lectus vitae accumsan. Mauris sodales molestie mauris vel venenatis. Phasellus fermentum tincidunt accumsan. Maecenas in sodales felis.</p>
+    <h1>npm install --save</h1>
+    <p>Get started by installing our packages from npm. All our packages include API and literate progamming documentation to start you of.</p>
     <button type="button" class="btn btn-default">Read documentation</button>
   </div>
 
@@ -154,29 +154,31 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
   <br><br><br><br><br><br>
 
   <div class="col-md-6">
-    <h1>Get simple data structures</h1>
-    <p>Donec a ligula nec nisi elementum ultrices. Etiam fermentum erat arcu, a ullamcorper ex pellentesque pulvinar. Pellentesque et semper velit. Vivamus elementum in neque posuere interdum.</p>
+    <h1>Easy to use functions and data structures</h1>
+    <p>No complicated objects, no complex process, just simple functions. Strings in, data structures out.</p>
     <button type="button" class="btn btn-default">Download</button>
   </div>
-  <pre><code class="javascript">
-[
-  { value: '@superman', tag: 'mention' },
-  { value: ':', tag: 'punctuation' },
-  { value: 'mail', tag: 'word' },
-  { value: 'me', tag: 'word' },
-  { value: 'at', tag: 'word' },
-  { value: 'r2d2@gmail.com', tag: 'email' },
-  { value: ',', tag: 'punctuation' },
-  { value: '2', tag: 'number' },
-  { value: 'of', tag: 'word' },
-  { value: 'us', tag: 'word' },
-  { value: 'party', tag: 'word' },
-  { value: '🎉', tag: 'emoji' },
-  { value: 'at', tag: 'word' },
-  { value: '3pm', tag: 'time' },
-  { value: ':)', tag: 'emoticon' },
-  { value: '#fun', tag: 'hashtag' }
-]
+  <pre><code class="javascript">var lemmatize = require( 'wink-lemmatizer' );
+lemmatize.adjective( 'farthest' );
+// -> 'far'
+  </code></pre>
+  <pre><code class="javascript">var sentiment = require( 'wink-sentiment' );
+sentiment( 'Excited to be part of the @imascientist team:-)!' );
+// -> { score: 5,
+//      normalizedScore: 2.5,
+//      tokenizedPhrase: [
+//        { value: 'Excited', tag: 'word', score: 3 },
+//        { value: 'to', tag: 'word' },
+//        { value: 'be', tag: 'word' },
+//        { value: 'part', tag: 'word' },
+//        { value: 'of', tag: 'word' },
+//        { value: 'the', tag: 'word' },
+//        { value: '@imascientist', tag: 'mention' },
+//        { value: 'team', tag: 'word' },
+//        { value: ':-)', tag: 'emoticon', score: 2 },
+//        { value: '!', tag: 'punctuation' }
+//      ]
+//    }
   </code></pre>
   </div>
 
@@ -187,28 +189,13 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
     <pre><code class="javascript">
 var sentiment = require( 'wink-sentiment' );
 sentiment( 'Excited to be part of the @imascientist team:-)!' );
-    </code></pre>
-    <pre><code class="javascript">
-{ score: 5,
-  normalizedScore: 2.5,
-  tokenizedPhrase: [
-    { value: 'Excited', tag: 'word', score: 3 },
-    { value: 'to', tag: 'word' },
-    { value: 'be', tag: 'word' },
-    { value: 'part', tag: 'word' },
-    { value: 'of', tag: 'word' },
-    { value: 'the', tag: 'word' },
-    { value: '@imascientist', tag: 'mention' },
-    { value: 'team', tag: 'word' },
-    { value: ':-)', tag: 'emoticon', score: 2 },
-    { value: '!', tag: 'punctuation' }
-    ]
-}
+// Some code that shows how different packages would work together
+// to get interesting results
     </code></pre>
   </div>
   <div class="col-md-6">
-    <h1>Get results</h1>
-    <p>Suspendisse nec quam nibh. Duis at libero et massa molestie viverra. Nunc ut ultricies mauris, nec imperdiet nisl. Integer pellentesque, enim sed semper iaculis, orci orci finibus quam, id dapibus elit odio pellentesque sem.</p>
+    <h1>Data to information</h1>
+    <p>Turn dirty data into information and insights you can use. Use our packages to to filter out the noise and get to the good stuff.</p>
     <button type="button" class="btn btn-default">Try in sandbox</button>
   </div>
 
