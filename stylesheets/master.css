@@ -11,43 +11,17 @@ a:hover {
 }
 
 #packages-list {
-  position: fixed;
-  top: 80px;
   background: #eee;
-  width: 100%;
-  z-index: 100;
-  padding-bottom: 30px;
-  box-shadow: 0 0 10px #aaa;
-  display: none;
+  padding-top: 140px;
 }
 
 #packages-list dt {
-  margin-top: 30px;
+  margin-top: 100px;
+  font-size: 2.5rem;
 }
 
-#packages-list a {
-  font-size: 1.6rem;
-}
-
-#packages-list a.close-button {
-  display: block;
-  margin: 20px auto;
-  color: red;
-  background: #6c307d;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  line-height: 37px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 0;
-  border-radius: 100%;
-  opacity: 0.5;
-}
-
-#packages-list a.close-button:hover {
-  opacity: 1;
+#packages-list dd a {
+  font-size: 1.5rem;
 }
 
 header {
