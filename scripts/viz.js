@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var nOfCols = 42, nOfRows = 13;
+  var nOfCols = 42, nOfRows = 15;
 
   var $table = $( '<table>' );
   var $bubbles = [];
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           .text( ' ' );
 
         if( pixelData[0] !== 0 ) $bubble.addClass( 'black' ).addClass( 'on' );
+
         $bubbles[i][j] = $bubble;
         $cell.append( $bubble );
         $row.append( $cell );
@@ -51,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var j = Math.floor( Math.random() * nOfCols );
         var $bubble = $bubbles[i][j];
 
-        if ( $bubble.hasClass( 'off' ) ) {
+        if ( $bubble.hasClass( 'black') ) {
+          // Do nothing
+        } else if ( $bubble.hasClass( 'off' ) ) {
           $bubble
             .addClass( 'on' )
             .removeClass( 'off' );
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
       }
 
-      var iterations = Math.floor(Math.random() * 50);
+      var iterations = Math.floor(Math.random() * 10);
 
       for ( var i = 0; i < iterations; i++ ) {
         alterBubble();
@@ -76,7 +79,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 500)
   }
 
-  loop();
+  window.setTimeout( loop, 5000 );
+
+  $('#viz').on('mouseenter', function () {
+    // Reset bubbles
+    $('.bubble').not('.black')
+      .removeClass( 'on' )
+      .removeClass( 'wink' )
+      .addClass( 'off' );
+  })
 
   $( '#viz' ).append( $table );
 });
