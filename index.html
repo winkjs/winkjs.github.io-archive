@@ -86,8 +86,8 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
     </code></pre>
   </div>
   <div class="col-md-6">
-    <h1>npm install --save</h1>
-    <p>Get started by installing our packages from npm. All our packages include API and literate progamming documentation to start you of.</p>
+    <h1>Get Started</h1>
+    <p>All packages expose consistent and uniform APIs, thus minimizing the need to learn a new interface for each task. With a comprehensive API documentation, you can be immediately productive.</p>
     <a class="btn btn-default" role="button" href="https://www.npmjs.com/search?q=wink%20maintainer%3Asanjaya">Browse on NPM</a>
   </div>
 
@@ -95,10 +95,10 @@ tagger.tagSentence( '@FeminismInIndia👧 conducted a workshop at #AmbedkarUnive
   <br><br><br><br><br><br>
 
   <div class="col-md-6">
-    <h1>Easy to use functions and data structures</h1>
-    <p>No complicated objects, no complex process, just simple functions. Strings in, data structures out.</p>
-    <p>All our packages come with API documentation to help you get started.</p>
-    <p><a role="button" class="btn btn-default" href="http://winkjs.org/wink-pos-tagger/">Read Documentation</a></p>
+    <h1>Simple & Mature</h1>
+    <p>wink is designed to help you focus on the task at hand. No complexities! Just simple functions, some JSON and zero-configuration is enough to get you started.</p>
+    <p>Designed to work with Node.js streams, it delivers high performance scale.</p>
+    <p><a role="button" class="btn btn-default" href="/packages.html">Read Documentation</a></p>
   </div>
   <div class="col-md-6">
     <pre><code class="javascript">var lemmatize = require( 'wink-lemmatizer' );
@@ -130,15 +130,30 @@ sentiment( 'Excited to be part of the @imascientist team:-)!' );
 
   <div class="col-md-6">
     <pre><code class="javascript">
-var sentiment = require( 'wink-sentiment' );
-sentiment( 'Excited to be part of the @imascientist team:-)!' );
-// Some code that shows how different packages would work together
-// to get interesting results
+// Obtain wink's streaming api for standard deviation.
+var stdev = require( 'wink-statistics' ).streaming.stdev();
+// Use split2 package to break stream at every new line.
+var split = require( 'split2' );
+// Configuration to compute outliers.
+const minDataSize = 3; // Min # data points to process before outliers detection begins
+const useOutlier = false; // Use outlier data to update mean & standard deviation
+const multiplier = 2.5; // Used to flag a value as outlier if it is > multiplier x std dev.
+// Setup a pipe for standard input
+process.stdin.pipe( split() ).on( 'data', function ( data ) {
+  const value = +data;
+  const r = stdev.result();
+  const isOutlier = (r.size && (r.size >= minDataSize) &&
+    ((value > (r.mean + multiplier*r.stdev)) || (value < (r.mean - multiplier*r.stdev))));
+  if  ( isOutlier ) {
+    console.log( 'Outlier: %d', value );
+    if ( useOutlier ) stdev.compute( value );
+  } else stdev.compute( value );
+} );
     </code></pre>
   </div>
   <div class="col-md-6">
-    <h1>Data to information</h1>
-    <p>Turn dirty data into information and insights you can use. Use our packages to to filter out the noise and get to the good stuff.</p>
+    <h1>Peak into Possibilities</h1>
+    <p>Detect outliers in a stream of real numbers in near realtime using wink. It will even work on Raspberry Pi!</p><p>Possibilities are indeed endless whether you want to process large text corpus or simply crunch number or let machine do some learning for you.</p>
     <a role="button" class="btn btn-default" href="https://npm.runkit.com/wink-sentiment">Try in sandbox</a>
   </div>
 
