@@ -1,3 +1,10 @@
+@font-face {
+  font-family: winkjs;
+  src: url(../fonts/winkjs.eot) format("embedded-opentype"),
+       url(../fonts/winkjs.woff2) format("woff2"),
+       url(../fonts/winkjs.woff) format("woff");
+}
+
 body {
     font-family: 'ff-tisa-sans-web-pro', serif;
 }
@@ -61,7 +68,8 @@ header h2 {
 
 header h2 em {
   color: #6C307D;
-  font-weight: bold;
+  font-style: normal;
+  font-family: 'winkjs';
 }
 
 header p {
