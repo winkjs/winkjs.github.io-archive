@@ -27,6 +27,11 @@ a:hover {
   font-size: 2.5rem;
 }
 
+#packages-list dd {
+  display: block;
+  height: 3rem;
+}
+
 #packages-list dd a {
   font-size: 1.5rem;
 }
