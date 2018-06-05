@@ -108,6 +108,7 @@ header p {
 .navbar .navbar-brand {
   font-family: 'winkjs';
   letter-spacing: 0.4rem;
+  font-weight: 100;
 }
 
 #logo {
